@@ -6,6 +6,20 @@ const { userController } = require('../../controllers');
 module.exports = [
     {
         method: 'POST',
+        path: '/user/login',
+        joiSchemaForSwagger: {
+            group: 'user',
+            description: 'Login a new user',
+            model: 'UserLogin',
+            body: {
+                email: Joi.string().email().required().isValidEmail(),
+                password: Joi.string().required(),
+            }
+        },
+        handler: userController.login
+    },
+    {
+        method: 'POST',
         path: '/user/register',
         joiSchemaForSwagger: {
             group: 'user',
@@ -22,12 +36,12 @@ module.exports = [
     },
     {
         method: "GET",
-        path: '/user/hello',
+        path: '/',
         joiSchemaForSwagger: {
             group: 'user',
             description: 'register a new user',
             model: 'UserRegister',
         },
-        handler:userController.hello
+        handler:userController.chat,
     }
 ];

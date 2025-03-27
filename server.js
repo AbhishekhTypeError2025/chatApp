@@ -13,6 +13,7 @@ const { SERVER } = require('./config');
 const socketIo = require("socket.io");
 const mongoose = require('mongoose');
 const { PORT } = require('./config/config');
+const setUpSocket = require('./socket/socket');
 
 /** creating express server app for server. */
 const app = EXPRESS();
@@ -26,8 +27,9 @@ const io = socketIo(server, { cors: { origin: '*' } });
 
 /** Server is running here */
 const startNodeserver = async () => {
-    await require('./app/startup/mongodbStartup')(mongoose);//mongoose startup
-    await require('./app/startup/expressStartup')(app); // express startup.
+    await require('./app/startup/mongodbStartup')(mongoose);
+    await require('./app/startup/expressStartup')(app); 
+    await setUpSocket(io);
     return new Promise((resolve, reject) => {
         server.listen(PORT, (err) => {
             if (err) reject(err);

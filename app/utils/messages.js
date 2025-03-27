@@ -13,6 +13,7 @@ module.exports = {
     SOMETHING_WENT_WRONG: 'Something went wrong.',
     INTERNAL_SERVER_ERROR: 'Internal server error!',
     UNAUTHORIZED: 'Unauthorized access!',
+    USER_NOT_REGISTER:"User not registered",
     FORBIDDEN: 'Unrestricted access!',
     LOGGED_IN_SUCCESSFULLY: 'Logged in successfully.',
     USER_ALREADY_EXISTS: 'A user with this email or wallet address already exists.',
