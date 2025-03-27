@@ -1,0 +1,34 @@
+{
+    "name": "backend_project",
+    "version": "1.0.0",
+    "description": "Node.js Application",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "Chicmic",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "bcrypt": "^5.1.1",
+        "bcryptjs": "^3.0.2",
+        "canvas": "^2.9.3",
+        "cors": "^2.8.5",
+        "dotenv": "^8.6.0",
+        "ethers": "^5.6.8",
+        "express": "^4.16.4",
+        "handlebars": "^4.7.7",
+        "joi": "^17.5.0",
+        "jsonwebtoken": "^8.4.0",
+        "mongoose": "^8.12.1",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.6.1",
+        "nodemon": "^3.1.9",
+        "socket.io": "^4.8.1",
+        "swagger-ui-express": "^4.0.1"
+    }
+}
